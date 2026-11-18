@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NEXUS GAMING | Subí de nivel tu setup</title>
+<meta name="description" content="Tienda gaming en Costa Rica: teclados, mouse, audífonos, monitores, sillas y componentes.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230A0B10'/%3E%3Cpath d='M16 48V16l32 32V16' stroke='%232F6BFF' stroke-width='7' fill='none' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;700&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0A0B10;--s1:#12141D;--s2:#1A1D29;--ln:#272B3B;--t:#F2F4FA;--m:#9AA1B8;--b:#2F6BFF;--v:#8B5CF6;--gr:linear-gradient(135deg,#2F6BFF,#8B5CF6);--d:'Chakra Petch','Arial Narrow',sans-serif;--f:'Manrope','Segoe UI',Arial,sans-serif}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--t);font-family:var(--f);line-height:1.55;overflow-x:hidden}
+a{color:inherit;text-decoration:none}button,input,select,textarea{font:inherit;color:inherit}button{cursor:pointer;border:0;background:none}
+:focus-visible{outline:2px solid var(--b);outline-offset:2px}
+h1,h2,h3{font-family:var(--d);line-height:1.05;letter-spacing:.01em}
+.w{max-width:1240px;margin:0 auto;padding:0 22px}
+.btn{display:inline-block;background:var(--gr);color:#fff;font-weight:700;padding:12px 22px;border-radius:10px;transition:transform .2s,box-shadow .2s;text-align:center}
+.btn:hover{transform:translateY(-2px);box-shadow:0 8px 26px rgba(47,107,255,.45)}
+.btn.o{background:none;border:1px solid var(--ln);box-shadow:none}.btn.o:hover{border-color:var(--b);box-shadow:0 0 0 3px rgba(47,107,255,.18)}
+.btn.sm{padding:9px 14px;font-size:.88rem;width:100%}
+/* header */
+header{position:sticky;top:0;z-index:60;background:rgba(10,11,16,.85);backdrop-filter:blur(12px);border-bottom:1px solid var(--ln)}
+header .w{display:flex;align-items:center;gap:20px;height:68px}
+.logo{display:flex;align-items:center;gap:9px;font-family:var(--d);font-weight:700;font-size:1.3rem;letter-spacing:.06em}
+.logo svg{width:32px;height:32px}
+nav{display:flex;gap:6px;margin-left:10px}
+nav a{padding:8px 12px;border-radius:8px;color:var(--m);font-weight:500;position:relative;transition:color .2s}
+nav a:hover,nav a.on{color:var(--t)}
+nav a::after{content:"";position:absolute;left:12px;right:12px;bottom:2px;height:2px;background:var(--gr);transform:scaleX(0);transition:transform .25s}
+nav a:hover::after,nav a.on::after{transform:scaleX(1)}
+.sr{flex:1;max-width:340px;margin-left:auto;position:relative}
+.sr input{width:100%;background:var(--s1);border:1px solid var(--ln);border-radius:10px;padding:10px 14px;transition:border-color .2s,box-shadow .2s}
+.sr input:focus{outline:0;border-color:var(--b);box-shadow:0 0 0 3px rgba(47,107,255,.2)}
+.cb{position:relative;width:44px;height:44px;border:1px solid var(--ln);border-radius:10px;display:grid;place-items:center;transition:border-color .2s}
+.cb:hover{border-color:var(--b)}.cb svg{width:22px;height:22px}
+.cb b{position:absolute;top:-6px;right:-6px;background:var(--gr);min-width:20px;height:20px;border-radius:10px;font-size:.72rem;display:grid;place-items:center;padding:0 5px}
+.cb.pop{animation:pop .35s}@keyframes pop{50%{transform:scale(1.18)}}
+.mb{display:none;width:44px;height:44px;border:1px solid var(--ln);border-radius:10px;font-size:1.3rem}
+/* vistas */
+.v{display:none}.v.on{display:block;animation:vin .45s ease both}
+@keyframes vin{from{opacity:0;transform:translateY(10px)}}
+.rv{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease}.rv.in{opacity:1;transform:none}
+section.s{padding:76px 0}
+.hd{display:flex;justify-content:space-between;align-items:end;gap:16px;flex-wrap:wrap;margin-bottom:30px}
+.hd h2{font-size:clamp(1.9rem,4vw,2.8rem)}.hd p{color:var(--m);max-width:420px}
+/* hero */
+.hero{position:relative;overflow:hidden;padding:70px 0 60px}
+.hero::before,.hero::after{content:"";position:absolute;border-radius:50%;filter:blur(90px);opacity:.35;animation:fl 9s ease-in-out infinite alternate}
+.hero::before{width:420px;height:420px;background:var(--b);left:-120px;top:-100px}
+.hero::after{width:380px;height:380px;background:var(--v);right:-80px;bottom:-120px;animation-delay:-4s}
+@keyframes fl{to{transform:translate(40px,30px)}}
+.hero .w{position:relative;z-index:1;display:grid;grid-template-columns:1.05fr .95fr;gap:30px;align-items:center}
+.hero h1{font-size:clamp(3rem,8vw,6rem);text-transform:uppercase}
+.hero h1 em{font-style:normal;background:var(--gr);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{color:var(--m);font-size:1.1rem;max-width:460px;margin:18px 0 28px}
+.hero .bs{display:flex;gap:12px;flex-wrap:wrap}
+.stage{position:relative;aspect-ratio:1;max-width:520px;justify-self:center;width:100%;background:radial-gradient(circle,rgba(139,92,246,.22),transparent 65%);display:grid;place-items:center}
+.stage svg{width:100%;filter:drop-shadow(0 0 28px rgba(47,107,255,.5))}
+.stage .fl1{position:absolute;left:0;bottom:12%;width:38%;animation:bob 5s ease-in-out infinite}
+.stage .fl2{position:absolute;right:0;top:8%;width:30%;animation:bob 6s ease-in-out infinite reverse}
+@keyframes bob{50%{transform:translateY(-14px)}}
+/* categorías */
+.cats{display:grid;grid-template-columns:repeat(7,1fr);gap:12px}
+.cat{background:var(--s1);border:1px solid var(--ln);border-radius:14px;padding:16px 8px;text-align:center;transition:transform .25s,border-color .25s,background .25s}
+.cat:hover{transform:translateY(-5px);border-color:var(--b);background:var(--s2)}
+.cat svg{width:62px;height:62px;display:block;margin:0 auto 8px}.cat b{font-size:.9rem}
+/* tarjetas */
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.card{background:var(--s1);border:1px solid var(--ln);border-radius:16px;overflow:hidden;display:flex;flex-direction:column;transition:transform .3s,border-color .3s,box-shadow .3s}
+.card:hover{transform:translateY(-6px);border-color:rgba(47,107,255,.7);box-shadow:0 14px 40px rgba(47,107,255,.2)}
+.pic{position:relative;display:block;aspect-ratio:1;background:radial-gradient(circle at 50% 40%,var(--s2),var(--s1));overflow:hidden}
+.pic svg{position:absolute;inset:10%;width:80%;height:80%;transition:transform .4s}
+.card:hover .pic svg{transform:scale(1.1) rotate(-2deg)}
+.pic img,.gal img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.bd{position:absolute;left:12px;top:12px;z-index:2;background:var(--gr);font-weight:700;font-size:.78rem;padding:4px 10px;border-radius:20px}
+.ci{padding:16px;display:flex;flex-direction:column;gap:6px;flex:1}
+.ci small{color:var(--b);font-weight:700;font-size:.78rem}
+.ci h3{font-size:1.15rem}.ci p{color:var(--m);font-size:.88rem;flex:1}
+.pr{display:flex;align-items:baseline;gap:8px;margin:4px 0 8px}.pr b{font-family:var(--d);font-size:1.3rem}.pr s{color:var(--m);font-size:.88rem}
+/* promo / beneficios */
+.promo{display:grid;grid-template-columns:1.2fr 1fr;border-radius:22px;overflow:hidden;background:var(--gr)}
+.promo>div{padding:44px}.promo h2{font-size:clamp(2rem,5vw,3.4rem)}.promo p{margin:12px 0 22px;max-width:400px}
+.promo .btn{background:#0A0B10}.promo .code{display:flex;align-items:center;justify-content:center;background:rgba(10,11,16,.28);font-family:var(--d);font-size:2.4rem;text-align:center}
+.ben{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.bx{background:var(--s1);border:1px solid var(--ln);border-radius:14px;padding:22px}
+.bx svg{width:34px;height:34px;margin-bottom:10px}.bx h3{font-size:1.1rem;margin-bottom:4px}.bx p{color:var(--m);font-size:.9rem}
+.cta{text-align:center;background:var(--s1);border:1px solid var(--ln);border-radius:22px;padding:60px 22px}
+.cta h2{font-size:clamp(1.9rem,4.5vw,3rem);margin-bottom:12px}.cta p{color:var(--m);margin-bottom:24px}
+/* catálogo */
+.tb{display:grid;grid-template-columns:1.4fr 1fr 1.2fr 1fr;gap:12px;background:var(--s1);border:1px solid var(--ln);border-radius:14px;padding:16px;margin-bottom:22px;align-items:end}
+.tb label{display:block;font-size:.78rem;color:var(--m);margin-bottom:4px;font-weight:700}
+.tb input[type=text],.tb select{width:100%;background:var(--bg);border:1px solid var(--ln);border-radius:8px;padding:10px}
+.tb input[type=range]{width:100%;accent-color:var(--b)}
+.cnt{color:var(--m);margin-bottom:16px}
+.none{text-align:center;padding:60px 0;color:var(--m);grid-column:1/-1}
+/* producto */
+.pd{display:grid;grid-template-columns:1fr 1fr;gap:44px;padding:50px 0}
+.gal{position:relative;aspect-ratio:1;background:radial-gradient(circle at 50% 40%,var(--s2),var(--s1));border:1px solid var(--ln);border-radius:20px;overflow:hidden}
+.gal svg{position:absolute;inset:12%;width:76%;height:76%}
+.crumb{color:var(--m);font-size:.88rem;margin-bottom:14px}.crumb a:hover{color:var(--b)}
+.pd h1{font-size:clamp(1.9rem,4vw,2.8rem);margin-bottom:10px}
+.pd .big{font-family:var(--d);font-size:2rem;margin:14px 0}
+.pd ul{list-style:none;margin:16px 0;border:1px solid var(--ln);border-radius:12px;overflow:hidden}
+.pd li{display:flex;justify-content:space-between;gap:14px;padding:11px 16px;font-size:.92rem}.pd li:nth-child(odd){background:var(--s1)}.pd li span{color:var(--m)}
+.st{display:inline-block;font-weight:700;font-size:.85rem;padding:4px 12px;border-radius:20px;background:rgba(47,107,255,.15);color:#7fa4ff}
+.st.lo{background:rgba(139,92,246,.18);color:#c1a5ff}
+.row{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}.row .btn{flex:1;min-width:150px}
+/* texto */
+.tx{max-width:820px;padding:56px 0}.tx h1{font-size:clamp(2.2rem,5vw,3.4rem);margin-bottom:18px}.tx h2{font-size:1.5rem;margin:30px 0 8px}.tx p{color:#c9cfe2;margin-bottom:12px}
+details{background:var(--s1);border:1px solid var(--ln);border-radius:12px;margin-bottom:10px;padding:14px 18px}
+summary{font-weight:700;cursor:pointer}details[open]{border-color:var(--b)}details p{margin:10px 0 0}
+.fm{display:grid;gap:14px;max-width:560px}.fm label{font-size:.85rem;font-weight:700;display:block;margin-bottom:4px}
+.fm input,.fm textarea{width:100%;background:var(--s1);border:1px solid var(--ln);border-radius:10px;padding:11px 13px}
+.fm input:focus,.fm textarea:focus{outline:0;border-color:var(--b)}
+.er{color:#ff8da1;font-size:.8rem;min-height:1em;display:block;margin-top:3px}
+.ok{background:rgba(47,107,255,.14);border:1px solid var(--b);border-radius:12px;padding:16px;margin-top:14px;display:none}
+/* footer */
+footer{border-top:1px solid var(--ln);background:var(--s1);padding:56px 0 24px;margin-top:40px}
+.fg{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:30px}footer h3{font-size:1rem;margin-bottom:12px}
+footer p,footer a{display:block;color:var(--m);font-size:.9rem;margin-bottom:7px}footer a:hover{color:var(--t)}
+.cp{border-top:1px solid var(--ln);margin-top:30px;padding-top:18px;color:var(--m);font-size:.82rem}
+/* carrito */
+.ov{position:fixed;inset:0;background:rgba(0,0,0,.65);opacity:0;pointer-events:none;transition:opacity .25s;z-index:90}
+.dr{position:fixed;top:0;right:0;height:100%;width:min(430px,100%);background:var(--s1);border-left:1px solid var(--ln);z-index:100;transform:translateX(103%);transition:transform .3s;display:flex;flex-direction:column}
+body.oc .ov{opacity:1;pointer-events:auto}body.oc .dr{transform:none}
+.dh{display:flex;justify-content:space-between;align-items:center;padding:18px 20px;border-bottom:1px solid var(--ln)}.dh h2{font-size:1.4rem}
+.it{flex:1;overflow:auto;padding:6px 20px}
+.em{text-align:center;color:var(--m);padding:46px 0}
+.ln{display:grid;grid-template-columns:60px 1fr auto;gap:12px;align-items:center;padding:14px 0;border-bottom:1px solid var(--ln)}
+.ln .t{position:relative;width:60px;height:60px;background:var(--s2);border-radius:10px;overflow:hidden}.ln .t svg{position:absolute;inset:8%;width:84%;height:84%}.ln .t img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.ln b{display:block;font-size:.9rem}.ln small{color:var(--m)}
+.q{display:flex;align-items:center;gap:8px;margin-top:6px}.q button{width:26px;height:26px;border:1px solid var(--ln);border-radius:6px}.q button:hover{border-color:var(--b)}
+.rm{color:#ff8da1;font-size:.8rem;text-decoration:underline}
+.ft{padding:18px 20px;border-top:1px solid var(--ln)}
+.sb{display:flex;justify-content:space-between;color:var(--m);margin-bottom:4px}
+.tt{display:flex;justify-content:space-between;font-family:var(--d);font-size:1.4rem;margin:8px 0 12px}
+.ft .btn{width:100%;margin-bottom:8px}
+.co{display:none}.co .fm{gap:10px}.co.on{display:block}
+.demo{font-size:.78rem;color:#c1a5ff;margin-bottom:8px}
+.toast{position:fixed;left:50%;bottom:24px;transform:translate(-50%,160%);background:var(--s2);border:1px solid var(--b);padding:12px 20px;border-radius:12px;z-index:120;transition:transform .3s;font-weight:700}
+.toast.on{transform:translate(-50%,0)}
+@media(max-width:1000px){.grid{grid-template-columns:repeat(2,1fr)}.cats{grid-template-columns:repeat(4,1fr)}.hero .w,.promo,.pd{grid-template-columns:1fr}.ben{grid-template-columns:repeat(2,1fr)}.fg{grid-template-columns:1fr 1fr}.tb{grid-template-columns:1fr 1fr}.stage{max-width:380px}
+ nav{display:none;position:absolute;top:68px;left:0;right:0;background:var(--s1);flex-direction:column;padding:10px 22px;margin:0;border-bottom:1px solid var(--ln)}nav.on{display:flex}.mb{display:block}}
+@media(max-width:560px){.cats{grid-template-columns:repeat(3,1fr)}.grid{gap:12px}.ci{padding:12px}.ci p{display:none}.sr{display:none}header .w{gap:12px}.logo{margin-right:auto}.tb{grid-template-columns:1fr}.promo>div{padding:28px}.fg{grid-template-columns:1fr}.hero{padding:44px 0}}
+@media(prefers-reduced-motion:reduce){*,::before,::after{animation:none!important;transition:none!important}.rv{opacity:1;transform:none}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2F6BFF"/><stop offset="1" stop-color="#8B5CF6"/></linearGradient></defs></svg>
+
+<header>
+ <div class="w">
+  <a class="logo" href="#inicio" aria-label="NEXUS GAMING, inicio">
+   <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="14" fill="#12141D" stroke="#272B3B"/><path d="M16 48V16l32 32V16" stroke="url(#g)" stroke-width="7" fill="none" stroke-linejoin="round"/><circle cx="16" cy="16" r="4" fill="#fff"/><circle cx="48" cy="48" r="4" fill="#fff"/></svg>
+   NEXUS GAMING
+  </a>
+  <nav id="nav"><a href="#inicio" data-n="inicio">Inicio</a><a href="#catalogo" data-n="catalogo">Catálogo</a><a href="#nosotros" data-n="nosotros">Nosotros</a><a href="#ayuda" data-n="ayuda">Ayuda</a><a href="#contacto" data-n="contacto">Contacto</a></nav>
+  <form class="sr" id="sf" role="search"><input id="hq" type="search" placeholder="Buscar teclados, mouse, monitores…" aria-label="Buscar productos"></form>
+  <button class="cb" id="oc" aria-label="Abrir carrito"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 4h2l2.4 11h10.2L20 7H6"/><circle cx="9" cy="19.5" r="1.4"/><circle cx="17" cy="19.5" r="1.4"/></svg><b id="cn">0</b></button>
+  <button class="mb" id="mb" aria-label="Menú">☰</button>
+ </div>
+</header>
+
+<main>
+<!-- INICIO -->
+<div class="v" id="v-inicio">
+ <div class="hero"><div class="w">
+  <div>
+   <h1>Subí de <em>nivel</em> tu setup</h1>
+   <p>Teclados, mouse, audífonos, monitores y componentes para jugadores de Costa Rica. Rendimiento real, precios en colones.</p>
+   <div class="bs"><a class="btn" href="#catalogo">Ver catálogo</a><a class="btn o" href="#ayuda">Envíos y garantía</a></div>
+  </div>
+  <div class="stage" id="stage"></div>
+ </div></div>
+ <section class="s"><div class="w">
+  <div class="hd rv"><h2>Categorías</h2><p>Armá tu setup pieza por pieza.</p></div>
+  <div class="cats" id="cats"></div>
+ </div></section>
+ <section class="s" style="padding-top:0"><div class="w">
+  <div class="hd rv"><h2>Productos destacados</h2><p>Los favoritos del equipo NEXUS.</p></div>
+  <div class="grid" id="feat"></div>
+ </div></section>
+ <section class="s" style="padding-top:0"><div class="w"><div class="promo rv">
+  <div><h2>Semana Gamer: hasta 20% menos</h2><p>Descuentos en periféricos y audio. Aplicá el código al pedir por WhatsApp.</p><a class="btn" href="#catalogo" data-sort="asc">Ver ofertas</a></div>
+  <div class="code">NEXUS10</div>
+ </div></div></section>
+ <section class="s" style="padding-top:0"><div class="w">
+  <div class="hd rv"><h2>Más vendidos</h2><p>Lo que más se llevan nuestros clientes.</p></div>
+  <div class="grid" id="best"></div>
+ </div></section>
+ <section class="s" style="padding-top:0"><div class="w"><div class="ben" id="ben"></div></div></section>
+ <section class="s" style="padding-top:0"><div class="w"><div class="cta rv"><h2>¿Listo para tu próximo setup?</h2><p>Escribinos y te ayudamos a elegir según tu presupuesto.</p><a class="btn" href="#contacto">Hablar con el equipo</a></div></div></section>
+</div>
+
+<!-- CATÁLOGO -->
+<div class="v" id="v-catalogo"><div class="w" style="padding-top:44px;padding-bottom:40px">
+ <div class="hd"><h2>Catálogo</h2><p>Filtrá por categoría y precio, y ordená como prefieras.</p></div>
+ <div class="tb">
+  <div><label for="fq">Buscar</label><input type="text" id="fq" placeholder="Nombre o palabra clave"></div>
+  <div><label for="fc">Categoría</label><select id="fc"></select></div>
+  <div><label for="fp">Precio máximo: <span id="fpv"></span></label><input type="range" id="fp" min="10000" max="160000" step="5000" value="160000"></div>
+  <div><label for="fs">Ordenar por</label><select id="fs"><option value="pop">Más populares</option><option value="asc">Precio: menor a mayor</option><option value="desc">Precio: mayor a menor</option><option value="name">Nombre A-Z</option></select></div>
+ </div>
+ <div class="cnt" id="cnt"></div>
+ <div class="grid" id="res"></div>
+</div></div>
+
+<!-- PRODUCTO -->
+<div class="v" id="v-producto"><div class="w" id="pbox"></div></div>
+
+<!-- NOSOTROS -->
+<div class="v" id="v-nosotros"><div class="w tx">
+ <h1>Quiénes somos</h1>
+ <p>NEXUS GAMING es una tienda virtual costarricense para jugadores y entusiastas de la tecnología. Nació de un problema común: armar un buen setup cuesta, y no siempre se sabe qué comprar.</p>
+ <p>Seleccionamos periféricos, audio, monitores y componentes con buena relación entre rendimiento y precio, y los explicamos sin tecnicismos.</p>
+ <h2>Nuestro lema</h2><p>Subí de nivel. Cada pieza tiene que mejorar tu forma de jugar.</p>
+ <h2>Qué nos define</h2><p>Tecnología, innovación, rendimiento, calidad y comunidad.</p>
+ <p style="margin-top:20px"><a class="btn" href="#catalogo">Explorar la tienda</a></p>
+</div></div>
+
+<!-- AYUDA -->
+<div class="v" id="v-ayuda"><div class="w tx">
+ <h1>Ayuda</h1>
+ <h2>Preguntas frecuentes</h2>
+ <details><summary>¿Cómo hago un pedido?</summary><p>Agregá productos al carrito y finalizá la compra. En este prototipo el proceso es demostrativo, y el pedido se coordina por WhatsApp.</p></details>
+ <details><summary>¿Qué formas de pago aceptan?</summary><p>SINPE Móvil y transferencia bancaria. No se procesan pagos con tarjeta en este sitio.</p></details>
+ <details><summary>¿Los productos tienen factura?</summary><p>Sí, se emite factura electrónica con cada compra.</p></details>
+ <details><summary>¿Puedo ver un producto antes de comprarlo?</summary><p>Escribinos por WhatsApp y coordinamos una cita en San José.</p></details>
+ <h2>Envíos</h2><p>Enviamos a todo el país con Correos de Costa Rica (2 a 5 días hábiles) y mensajería en el Gran Área Metropolitana (1 a 2 días). Envío gratis en compras desde ₡80.000.</p>
+ <h2>Garantía</h2><p>Los productos tienen garantía de 12 meses por defectos de fabricación. Se excluyen daños por golpes, líquidos o mal uso.</p>
+ <h2>Políticas de compra</h2><p>Aceptamos cambios dentro de 15 días si el producto está sellado y con su empaque. Los productos abiertos solo se cambian por defecto de fábrica.</p>
+</div></div>
+
+<!-- CONTACTO -->
+<div class="v" id="v-contacto"><div class="w tx">
+ <h1>Contacto</h1>
+ <p>Escribinos para consultas, cotizaciones o soporte. Respondemos de lunes a sábado, de 9:00 a 18:00.</p>
+ <form class="fm" id="cf" novalidate>
+  <div><label for="cn1">Nombre</label><input id="cn1" autocomplete="name"><span class="er"></span></div>
+  <div><label for="ce">Correo</label><input id="ce" type="email" autocomplete="email"><span class="er"></span></div>
+  <div><label for="cm">Mensaje</label><textarea id="cm" rows="4"></textarea><span class="er"></span></div>
+  <button class="btn" type="submit">Enviar mensaje</button>
+ </form>
+ <div class="ok" id="cok" role="status"></div>
+ <h2>Más formas de contacto</h2>
+ <p>WhatsApp: +506 8888-8888 · info@nexusgaming.cr · San José, Costa Rica</p>
+ <a class="btn o" href="https://wa.me/50688888888?text=Hola%20NEXUS%20GAMING%2C%20tengo%20una%20consulta" target="_blank" rel="noopener">Escribir por WhatsApp</a>
+</div></div>
+</main>
+
+<footer><div class="w">
+ <div class="fg">
+  <div><div class="logo" style="margin-bottom:12px">NEXUS GAMING</div><p>Tienda gaming costarricense. Subí de nivel tu setup.</p></div>
+  <div><h3>Tienda</h3><a href="#catalogo">Catálogo</a><a href="#inicio">Ofertas</a><a href="#nosotros">Nosotros</a></div>
+  <div><h3>Ayuda</h3><a href="#ayuda">Preguntas frecuentes</a><a href="#ayuda">Envíos</a><a href="#ayuda">Garantía</a></div>
+  <div><h3>Contacto</h3><p>+506 8888-8888</p><p>info@nexusgaming.cr</p><a href="https://instagram.com/" target="_blank" rel="noopener">Instagram</a></div>
+ </div>
+ <div class="cp">© 2026 NEXUS GAMING. Prototipo académico: la compra es demostrativa y no se procesan pagos reales. Sitio generado con inteligencia artificial.</div>
+</div></footer>
+
+<div class="ov" id="ov"></div>
+<aside class="dr" aria-label="Carrito de compras">
+ <div class="dh"><h2>Tu carrito</h2><button id="cc" aria-label="Cerrar carrito" style="font-size:1.6rem">×</button></div>
+ <div class="it" id="it"></div>
+ <div class="ft" id="ft">
+  <div class="sb"><span>Subtotal</span><span id="sub">₡0</span></div>
+  <div class="sb"><span>Envío</span><span id="env">₡0</span></div>
+  <div class="tt"><span>Total</span><span id="tot">₡0</span></div>
+  <button class="btn" id="go">Finalizar compra (demo)</button>
+  <button class="btn o" id="clr">Vaciar carrito</button>
+ </div>
+ <div class="ft co" id="co">
+  <p class="demo">Compra demostrativa: no se cobra ni se procesa ningún pago.</p>
+  <form class="fm" id="of" novalidate>
+   <div><label for="on">Nombre</label><input id="on"><span class="er"></span></div>
+   <div><label for="oe">Correo</label><input id="oe" type="email"><span class="er"></span></div>
+   <div><label for="op">Teléfono (8 dígitos)</label><input id="op" inputmode="numeric"><span class="er"></span></div>
+   <button class="btn" type="submit">Confirmar pedido</button>
+   <button class="btn o" type="button" id="bk">Volver al carrito</button>
+  </form>
+ </div>
+</aside>
+<div class="toast" id="toast" role="status"></div>
+
+<script>
+/* ===== Datos ===== */
+var CATS=['Teclados','Mouse','Audio','Monitores','Sillas','Accesorios','Componentes'];
+var CT={Teclados:'kb',Mouse:'ms',Audio:'hs',Monitores:'mon',Sillas:'chair',Accesorios:'ctl',Componentes:'ssd'};
+var P=[
+{id:1,n:'Teclado mecánico K87 RGB',c:'Teclados',t:'kb',p:42900,d:'Formato TKL con switches rojos y retroiluminación RGB.',s:[['Formato','TKL 87 teclas'],['Switches','Lineales rojos'],['Conexión','USB-C desmontable'],['Iluminación','RGB por tecla']],k:12,f:1,b:1},
+{id:2,n:'Mouse Viper 16K',c:'Mouse',t:'ms',p:24500,o:29900,d:'Sensor óptico de 16.000 DPI, ligero y de respuesta rápida.',s:[['Sensor','Óptico 16.000 DPI'],['Peso','62 g'],['Botones','6 programables'],['Conexión','USB trenzado']],k:20,f:1,b:1},
+{id:3,n:'Audífonos Pulse 7.1',c:'Audio',t:'hs',p:38900,o:45900,d:'Sonido envolvente virtual 7.1 con micrófono desmontable.',s:[['Sonido','Envolvente 7.1 virtual'],['Drivers','50 mm'],['Micrófono','Desmontable'],['Conexión','USB y 3.5 mm']],k:8,f:1,b:1},
+{id:4,n:'Monitor Vector 27" 165 Hz',c:'Monitores',t:'mon',p:159000,d:'Panel IPS QHD de 27 pulgadas, 165 Hz y 1 ms.',s:[['Tamaño','27 pulgadas'],['Resolución','2560 x 1440'],['Frecuencia','165 Hz'],['Respuesta','1 ms']],k:5,f:1},
+{id:5,n:'Silla gamer Apex',c:'Sillas',t:'chair',p:119000,d:'Respaldo reclinable, soporte lumbar y reposabrazos 3D.',s:[['Material','Cuero sintético'],['Reclinación','Hasta 165°'],['Carga máx.','120 kg'],['Pistón','Clase 4']],k:3,b:1},
+{id:6,n:'Micrófono USB Stream',c:'Accesorios',t:'mic',p:34500,d:'Micrófono de condensador para streaming y chat.',s:[['Tipo','Condensador'],['Patrón','Cardioide'],['Conexión','USB'],['Incluye','Trípode y filtro']],k:10},
+{id:7,n:'Mousepad XXL Grid',c:'Accesorios',t:'pad',p:11900,d:'Superficie de tela 90 x 40 cm con base antideslizante.',s:[['Tamaño','90 x 40 cm'],['Grosor','4 mm'],['Base','Goma antideslizante'],['Bordes','Cosidos']],k:30,b:1},
+{id:8,n:'Control inalámbrico Orbit',c:'Accesorios',t:'ctl',p:29900,d:'Control inalámbrico compatible con PC y consolas.',s:[['Conexión','Bluetooth y 2.4 GHz'],['Batería','Hasta 20 h'],['Vibración','Dual'],['Compatible','PC, Android']],k:14,f:1},
+{id:9,n:'SSD NVMe 1 TB',c:'Componentes',t:'ssd',p:49900,o:57900,d:'Almacenamiento NVMe de 1 TB con carga rápida de juegos.',s:[['Capacidad','1 TB'],['Interfaz','PCIe 4.0 x4'],['Lectura','Hasta 7.000 MB/s'],['Formato','M.2 2280']],k:18},
+{id:10,n:'Kit de luces LED RGB',c:'Componentes',t:'led',p:15900,d:'Tira LED con control remoto para tu escritorio.',s:[['Largo','2 metros'],['Control','Remoto y app'],['Modos','16 millones de colores'],['Energía','USB 5V']],k:25}
+];
+var WA='50688888888';
+
+/* ===== Ilustraciones de producto (respaldo si no hay foto) ===== */
+function art(t){
+ var B='#232842',A='url(#g)',s='';
+ if(t=='kb'){s='<rect x="14" y="70" width="172" height="70" rx="9" fill="'+B+'"/>';for(var r=0;r<4;r++)for(var c=0;c<12;c++)s+='<rect x="'+(22+c*13.4)+'" y="'+(78+r*15)+'" width="10.5" height="11" rx="2" fill="'+(r==3&&c>2&&c<9?A:'#3a4064')+'"/>'}
+ if(t=='ms')s='<rect x="66" y="30" width="68" height="124" rx="34" fill="'+B+'"/><path d="M100 30v50M66 80h68" stroke="#3a4064" stroke-width="3"/><rect x="95" y="46" width="10" height="22" rx="5" fill="'+A+'"/><path d="M80 138q20 14 40 0" stroke="'+A+'" stroke-width="4" fill="none"/>';
+ if(t=='hs')s='<path d="M44 110V86a56 56 0 0 1 112 0v24" stroke="'+A+'" stroke-width="10" fill="none"/><rect x="28" y="100" width="34" height="52" rx="12" fill="'+B+'"/><rect x="138" y="100" width="34" height="52" rx="12" fill="'+B+'"/><rect x="34" y="112" width="8" height="28" rx="4" fill="'+A+'"/><rect x="158" y="112" width="8" height="28" rx="4" fill="'+A+'"/>';
+ if(t=='mon')s='<rect x="16" y="34" width="168" height="108" rx="8" fill="'+B+'"/><rect x="24" y="42" width="152" height="86" rx="3" fill="'+A+'" opacity=".85"/><path d="M100 142v22M70 168h60" stroke="#3a4064" stroke-width="8" stroke-linecap="round"/>';
+ if(t=='chair')s='<rect x="60" y="16" width="80" height="92" rx="24" fill="'+B+'"/><rect x="72" y="30" width="56" height="62" rx="14" fill="'+A+'" opacity=".8"/><rect x="50" y="108" width="100" height="22" rx="10" fill="#3a4064"/><path d="M100 130v26M60 176l40-20 40 20" stroke="#3a4064" stroke-width="8" stroke-linecap="round" fill="none"/>';
+ if(t=='mic')s='<rect x="78" y="14" width="44" height="84" rx="22" fill="'+B+'"/><path d="M84 40h32M84 54h32M84 68h32" stroke="'+A+'" stroke-width="4"/><path d="M62 78q0 40 38 40t38-40" stroke="#3a4064" stroke-width="7" fill="none" stroke-linecap="round"/><path d="M100 118v36M70 160h60" stroke="#3a4064" stroke-width="8" stroke-linecap="round"/>';
+ if(t=='pad')s='<path d="M20 70l150-14 20 78-160 12z" fill="'+B+'"/><path d="M20 146l170-12" stroke="'+A+'" stroke-width="6"/><path d="M60 96l90-8M64 118l92-8" stroke="#3a4064" stroke-width="3"/>';
+ if(t=='ctl')s='<path d="M50 62h100c24 0 38 40 34 70-3 20-22 22-34 8l-14-18H64l-14 18c-12 14-31 12-34-8-4-30 10-70 34-70z" fill="'+B+'"/><path d="M62 92v20M52 102h20" stroke="'+A+'" stroke-width="5" stroke-linecap="round"/><circle cx="138" cy="94" r="6" fill="'+A+'"/><circle cx="152" cy="108" r="6" fill="#3a4064"/><circle cx="124" cy="108" r="6" fill="#3a4064"/>';
+ if(t=='ssd')s='<rect x="30" y="56" width="140" height="88" rx="10" fill="'+B+'"/><rect x="44" y="70" width="48" height="34" rx="4" fill="'+A+'" opacity=".85"/><rect x="100" y="70" width="30" height="34" rx="4" fill="#3a4064"/><path d="M44 124h112" stroke="#3a4064" stroke-width="5"/><rect x="30" y="144" width="140" height="6" fill="'+A+'"/>';
+ if(t=='led')s='<path d="M20 140q40-70 80-20t80-60" stroke="'+A+'" stroke-width="10" fill="none" stroke-linecap="round" stroke-dasharray="1 14"/><path d="M20 140q40-70 80-20t80-60" stroke="#3a4064" stroke-width="4" fill="none"/>';
+ return '<svg viewBox="0 0 200 200" aria-hidden="true">'+s+'</svg>';
+}
+function im(p){return '<img src="img/p'+p.id+'.jpg" alt="'+p.n+'" loading="lazy" onerror="this.remove()">'}
+function col(n){return '₡'+String(n).replace(/\B(?=(\d{3})+(?!\d))/g,'.')}
+function $(i){return document.getElementById(i)}
+function by(id){return P.filter(function(x){return x.id==id})[0]}
+
+/* ===== Tarjetas ===== */
+function card(p){
+ var off=p.o?'<span class="bd">-'+Math.round((1-p.p/p.o)*100)+'%</span>':'';
+ return '<article class="card rv"><a href="#producto-'+p.id+'" class="pic" aria-label="Ver '+p.n+'">'+off+art(p.t)+im(p)+'</a><div class="ci"><small>'+p.c+'</small><h3><a href="#producto-'+p.id+'">'+p.n+'</a></h3><p>'+p.d+'</p><div class="pr"><b>'+col(p.p)+'</b>'+(p.o?'<s>'+col(p.o)+'</s>':'')+'</div><button class="btn sm" data-add="'+p.id+'">Agregar al carrito</button></div></article>';
+}
+function fill(id,list){$(id).innerHTML=list.map(card).join('')}
+
+/* ===== Inicio ===== */
+fill('feat',P.filter(function(p){return p.f}).slice(0,4));
+fill('best',P.filter(function(p){return p.b}).slice(0,4));
+$('cats').innerHTML=CATS.map(function(c){return '<a class="cat rv" href="#catalogo" data-cat="'+c+'">'+art(CT[c])+'<b>'+c+'</b></a>'}).join('');
+$('stage').innerHTML=art('mon')+'<div class="fl1">'+art('kb')+'</div><div class="fl2">'+art('hs')+'</div>';
+var IC={e:'<path d="M3 7h11v9H3zM14 10h4l3 3v3h-7" />',g:'<path d="M12 3l8 3v6c0 5-3.5 8-8 9-4.5-1-8-4-8-9V6z"/>',p:'<rect x="3" y="6" width="18" height="12" rx="2"/><path d="M3 10h18"/>',s:'<path d="M4 13a8 8 0 0 1 16 0v3a2 2 0 0 1-2 2h-1v-6h3M4 13v3a2 2 0 0 0 2 2h1v-6H4"/>'};
+var BN=[['e','Envíos a todo el país','Gratis desde ₡80.000.'],['g','Garantía de 12 meses','Cobertura por defectos de fábrica.'],['p','Pagá con SINPE Móvil','También por transferencia.'],['s','Soporte gamer','Te asesoramos por WhatsApp.']];
+$('ben').innerHTML=BN.map(function(b){return '<div class="bx rv"><svg viewBox="0 0 24 24" fill="none" stroke="url(#g)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">'+IC[b[0]]+'</svg><h3>'+b[1]+'</h3><p>'+b[2]+'</p></div>'}).join('');
+
+/* ===== Catálogo ===== */
+var S={q:'',cat:'all',max:160000,sort:'pop'};
+$('fc').innerHTML='<option value="all">Todas</option>'+CATS.map(function(c){return '<option>'+c+'</option>'}).join('');
+function cat(){
+ var l=P.filter(function(p){
+  var h=(p.n+' '+p.d+' '+p.c).toLowerCase();
+  return (S.cat=='all'||p.c==S.cat)&&p.p<=S.max&&(!S.q||h.indexOf(S.q.toLowerCase())>-1);
+ });
+ if(S.sort=='asc')l.sort(function(a,b){return a.p-b.p});
+ if(S.sort=='desc')l.sort(function(a,b){return b.p-a.p});
+ if(S.sort=='name')l.sort(function(a,b){return a.n.localeCompare(b.n)});
+ if(S.sort=='pop')l.sort(function(a,b){return (b.b||0)-(a.b||0)||a.id-b.id});
+ $('fq').value=S.q;$('fc').value=S.cat;$('fp').value=S.max;$('fs').value=S.sort;$('fpv').textContent=col(S.max);
+ $('cnt').textContent=l.length+(l.length==1?' producto':' productos');
+ $('res').innerHTML=l.length?l.map(card).join(''):'<div class="none">No hay productos con esos filtros.<br>Probá con otra categoría o subí el precio máximo.</div>';
+ reveal();
+}
+$('fq').oninput=function(){S.q=this.value;cat()};
+$('fc').onchange=function(){S.cat=this.value;cat()};
+$('fp').oninput=function(){S.max=+this.value;cat()};
+$('fs').onchange=function(){S.sort=this.value;cat()};
+$('sf').onsubmit=function(e){e.preventDefault();S.q=$('hq').value.trim();S.cat='all';S.max=160000;if(location.hash=='#catalogo')route();else location.hash='catalogo';$('hq').value=''};
+
+/* ===== Producto ===== */
+function prod(id){
+ var p=by(id);if(!p){location.hash='catalogo';return}
+ var rel=P.filter(function(x){return x.c==p.c&&x.id!=p.id});
+ if(rel.length<4)rel=rel.concat(P.filter(function(x){return x.c!=p.c&&x.id!=p.id})).slice(0,4);
+ var lo=p.k<=5;
+ $('pbox').innerHTML='<div class="pd"><div class="gal">'+art(p.t)+im(p)+'</div><div><div class="crumb"><a href="#inicio">Inicio</a> / <a href="#catalogo" data-cat="'+p.c+'">'+p.c+'</a> / '+p.n+'</div><h1>'+p.n+'</h1><span class="st'+(lo?' lo':'')+'">'+(lo?'Quedan '+p.k+' unidades':'Disponible: '+p.k+' en stock')+'</span><div class="big">'+col(p.p)+(p.o?' <s style="font-size:1rem;color:var(--m)">'+col(p.o)+'</s>':'')+'</div><p style="color:#c9cfe2">'+p.d+'</p><ul>'+p.s.map(function(x){return '<li><span>'+x[0]+'</span>'+x[1]+'</li>'}).join('')+'</ul><div class="row"><button class="btn" data-add="'+p.id+'">Agregar al carrito</button><a class="btn o" target="_blank" rel="noopener" href="https://wa.me/'+WA+'?text='+encodeURIComponent('Hola NEXUS GAMING, quiero comprar: '+p.n+' ('+col(p.p)+')')+'">Comprar por WhatsApp</a></div></div></div><div class="hd"><h2>Productos relacionados</h2></div><div class="grid" style="margin-bottom:40px">'+rel.slice(0,4).map(card).join('')+'</div>';
+ document.title=p.n+' | NEXUS GAMING';
+}
+
+/* ===== Router ===== */
+function reveal(){
+ var els=document.querySelectorAll('.v.on .rv:not(.in)');
+ if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('in')});return}
+ var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.12});
+ els.forEach(function(e){io.observe(e)});
+}
+function route(){
+ var h=(location.hash||'#inicio').slice(1),v=h,m=h.match(/^producto-(\d+)$/);
+ if(m){v='producto';prod(+m[1])}else if(!$('v-'+h)){v='inicio'}
+ document.querySelectorAll('.v').forEach(function(e){e.classList.toggle('on',e.id=='v-'+v)});
+ document.querySelectorAll('nav a').forEach(function(a){a.classList.toggle('on',a.dataset.n==v)});
+ if(v=='catalogo')cat();
+ if(v!='producto')document.title='NEXUS GAMING | Subí de nivel tu setup';
+ $('nav').classList.remove('on');window.scrollTo(0,0);reveal();
+}
+window.addEventListener('hashchange',route);
+
+/* ===== Carrito ===== */
+var cart={};try{cart=JSON.parse(localStorage.getItem('nx_cart')||'{}')}catch(e){}
+function save(){try{localStorage.setItem('nx_cart',JSON.stringify(cart))}catch(e){}}
+function toast(t){var e=$('toast');e.textContent=t;e.classList.add('on');clearTimeout(toast.t);toast.t=setTimeout(function(){e.classList.remove('on')},1900)}
+function totals(){var s=0,n=0;Object.keys(cart).forEach(function(id){var p=by(id);if(p){s+=p.p*cart[id];n+=cart[id]}});return {s:s,n:n,e:(s>0&&s<80000)?3000:0}}
+function draw(){
+ var h='';
+ Object.keys(cart).forEach(function(id){var p=by(id);if(!p)return;var q=cart[id];
+  h+='<div class="ln"><div class="t">'+art(p.t)+im(p)+'</div><div><b>'+p.n+'</b><small>'+col(p.p)+' c/u</small><div class="q"><button data-m="'+id+'" aria-label="Quitar uno">−</button><span>'+q+'</span><button data-a="'+id+'" aria-label="Agregar uno">+</button></div></div><div style="text-align:right"><b>'+col(p.p*q)+'</b><br><button class="rm" data-r="'+id+'">Quitar</button></div></div>'});
+ var T=totals();
+ $('it').innerHTML=h||'<div class="em">Tu carrito está vacío.<br>Agregá productos del catálogo.</div>';
+ $('cn').textContent=T.n;$('sub').textContent=col(T.s);$('env').textContent=T.e?col(T.e):(T.s?'Gratis':'₡0');$('tot').textContent=col(T.s+T.e);
+ $('go').disabled=!T.n;$('go').style.opacity=T.n?1:.4;
+}
+function add(id){cart[id]=(cart[id]||0)+1;save();draw();toast('Agregado al carrito');var b=$('oc');b.classList.remove('pop');void b.offsetWidth;b.classList.add('pop')}
+document.addEventListener('click',function(e){
+ var t=e.target.closest('[data-add],[data-a],[data-m],[data-r],[data-cat],[data-sort]');if(!t)return;
+ var d=t.dataset;
+ if(d.add)add(d.add);
+ if(d.a){cart[d.a]++;save();draw()}
+ if(d.m){cart[d.m]--;if(cart[d.m]<1)delete cart[d.m];save();draw()}
+ if(d.r){delete cart[d.r];save();draw()}
+ if(d.cat){S.cat=d.cat;S.q='';if(location.hash=='#catalogo')cat()}
+ if(d.sort)S.sort=d.sort;
+});
+function oc(v){document.body.classList.toggle('oc',v);if(!v){$('co').classList.remove('on');$('ft').style.display=''}}
+$('oc').onclick=function(){oc(true)};$('cc').onclick=$('ov').onclick=function(){oc(false)};
+document.addEventListener('keydown',function(e){if(e.key=='Escape')oc(false)});
+$('mb').onclick=function(){$('nav').classList.toggle('on')};
+$('clr').onclick=function(){cart={};save();draw()};
+$('go').onclick=function(){$('ft').style.display='none';$('co').classList.add('on')};
+$('bk').onclick=function(){$('co').classList.remove('on');$('ft').style.display=''};
+
+/* ===== Formularios ===== */
+function chk(f,rules){
+ var ok=true;
+ rules.forEach(function(r){var el=$(r[0]),er=el.parentNode.querySelector('.er'),v=el.value.trim(),m=r[1](v);er.textContent=m||'';if(m)ok=false});
+ return ok;
+}
+var vN=function(v){return v.length<3?'Escribí tu nombre (mínimo 3 letras).':''};
+var vE=function(v){return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v)?'':'Escribí un correo válido, por ejemplo nombre@correo.com.'};
+$('cf').onsubmit=function(e){
+ e.preventDefault();
+ if(!chk(this,[['cn1',vN],['ce',vE],['cm',function(v){return v.length<10?'El mensaje debe tener al menos 10 caracteres.':''}]]))return;
+ var o=$('cok');o.style.display='block';o.textContent='Gracias, '+$('cn1').value.trim()+'. Recibimos tu mensaje y te responderemos a '+$('ce').value.trim()+'. (Prototipo: el mensaje no se envía a un servidor).';
+ this.reset();
+};
+$('of').onsubmit=function(e){
+ e.preventDefault();
+ if(!chk(this,[['on',vN],['oe',vE],['op',function(v){return /^\d{8}$/.test(v)?'':'El teléfono debe tener 8 dígitos.'}]]))return;
+ var T=totals(),num='NX-'+Date.now().toString().slice(-6),msg='Hola NEXUS GAMING, pedido '+num+':%0A';
+ Object.keys(cart).forEach(function(id){var p=by(id);if(p)msg+='- '+cart[id]+' x '+encodeURIComponent(p.n)+'%0A'});
+ msg+='Total: '+col(T.s+T.e);
+ $('it').innerHTML='<div class="em"><h2 style="font-size:1.5rem;color:var(--t)">Pedido '+num+' confirmado</h2><p style="margin:12px 0">Gracias, '+$('on').value.trim()+'. Esta es una compra demostrativa y no se cobró nada.</p><a class="btn" target="_blank" rel="noopener" href="https://wa.me/'+WA+'?text='+msg+'">Enviar pedido por WhatsApp</a></div>';
+ cart={};save();$('cn').textContent=0;$('sub').textContent=$('tot').textContent=col(0);$('env').textContent=col(0);
+ $('co').classList.remove('on');$('ft').style.display='';$('go').disabled=true;$('go').style.opacity=.4;this.reset();
+};
+draw();route();
+</script>
+</body>
+</html>
